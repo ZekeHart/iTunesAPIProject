@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
-    <title>Document</title>
+    <title>Audio Player</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <form id="search-form" role="search" class="mw5 mw8-ns center tc">
             <label class="all-access" for="search-field">Enter an artist or band name to search for song
                 samples.</label>
-            <input id="search-bar" class="search-input pa3 bg-pink br4 b--hot-pink o-80 w-40 tc" name="search-field"
+            <input id="search-bar" class="search-input pa3 bg-pink br4 b--hot-pink o-80 w-40 tc mb3" name="search-field"
                 type="search" placeholder="Find your own" />
             <!-- <button id="search-button" type="submit"><span class="all-access">Submit your </span>Search</button> -->
         </form>
@@ -33,11 +33,23 @@
             </audio>
         </div>
         <h2 class="subheader tc f1 hot-pink pt4 o-80">Results</h2>
-        <hr class="b--hot-pink">
+
+        <div class="results-type fl pa2 w-100">
+            <h3 class="fl hot-pink">Show results of type:</h3>
+            <button class="songs-search white bg-pink link dim underline pa1 br3 o-80">Songs</button>
+            <button class="bands-search white bg-pink link dim underline pa1 br3 o-80">Bands</button>
+            <button class="albums-search white bg-pink link dim underline pa1 br3 o-80">Albums</button>
+            <hr class="b--hot-pink">
+        </div>
+
+        <!-- <hr class="b--hot-pink"> -->
+
         <div class="center w-90">
             <section class="athelas cf" id="results-display"></section>
         </div>
-
+        <div class="w-90 center tc">
+            <button class="more-results tc pa3 bg-pink white br4 b--hot-pink o-80">See more results</button>
+        </div>
 
     </main>
 </body>

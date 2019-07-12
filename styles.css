@@ -28,11 +28,18 @@
 
 .subheader {
     text-shadow: 1px 1px 2px white;
+    display: none;
+}
+
+.more-results {
+    display: none;
 }
 
 body {
     background-image: url(https://images.unsplash.com/photo-1533523705247-88786d3e9242?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2801&q=80);
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-color: hotpink;
 }
 
 ::placeholder {
@@ -41,3 +48,7 @@ body {
     font-size: 1.5em;
   }
   
+
+.results-type {
+    display: none;
+}
