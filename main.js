@@ -7,6 +7,8 @@ const subHeader = document.querySelector(".subheader")
 const songFilter = document.querySelector(".songs-search")
 const albumFilter = document.querySelector(".albums-search")
 const bandFilter = document.querySelector(".bands-search")
+const playButton = document.querySelector('#playbutton')
+const pauseButton = document.querySelector('#pausebutton')
 let searchType = 'songs'
 
 searchForm.addEventListener('submit', function (event) {
@@ -94,7 +96,7 @@ function populateResults(rawResults, secondArg) {
 
 function makeBox(trackInfo) {
     const trackDiv = document.createElement('div')
-
+    console.log(trackInfo.previewUrl)
     trackDiv.classList.add('track', 'fl', 'center', 'w-50', 'w-25-ns', 'tc', 'ma2')
     if (searchType === 'songs') {
         if (trackInfo.trackName.length >= 30) {
@@ -144,4 +146,16 @@ document.querySelector('#results-display').addEventListener('click', function (e
         audioPlayer.src = event.target.dataset['preview']
         audioPlayer.autoplay = 'true'
     }
+})
+
+playButton.addEventListener('click', function () {
+    document.querySelector('#music-player').play()
+    playButton.style.display = 'none'
+    pauseButton.style.display = 'inline'
+})
+
+pauseButton.addEventListener('click', function () {
+    document.querySelector('#music-player').pause()
+    playButton.style.display = 'inline'
+    pauseButton.style.display = 'none'
 })

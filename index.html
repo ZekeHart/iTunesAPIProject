@@ -26,20 +26,28 @@
                 type="search" placeholder="Find your own" />
             <!-- <button id="search-button" type="submit"><span class="all-access">Submit your </span>Search</button> -->
         </form>
+        <div class="tc pa1 w-100 o-80">
+            <button id="playbutton" class=" white bg-hot-pink link dim pa1 br3 o-80">play</button>
+            <button id="pausebutton" class="white bg-hot-pink link dim pa1 br3 o-80">pause</button>
+        </div>
         <div>
-            <audio controls id="music-player" src="">
+            <audio controls id="music-player"
+                src="https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music49/v4/1e/5e/80/1e5e8007-1805-f69b-4d8a-0502fa052cfc/mzaf_7600133190100700971.plus.aac.p.m4a">
                 Your browser does not support the
                 <code>audio</code>
             </audio>
         </div>
         <h2 class="subheader tc f1 hot-pink pt4 o-80">Results</h2>
 
-        <div class="results-type fl pa2 w-100">
-            <h3 class="fl hot-pink">Show results of type:</h3>
-            <button class="songs-search white bg-pink link dim underline pa1 br3 o-80">Songs</button>
-            <button class="bands-search white bg-pink link dim underline pa1 br3 o-80">Bands</button>
-            <button class="albums-search white bg-pink link dim underline pa1 br3 o-80">Albums</button>
-            <hr class="b--hot-pink">
+        <div class="results-type flex-row pa2 w-100">
+            <div class="fl o-80 w-100">
+                <h3 class="fl hot-pink ">Show results of type:</h3>
+                <button class="songs-search white bg-hot-pink link dim underline pa1 br3 o-80">Songs</button>
+                <button class="bands-search white bg-hot-pink link dim underline pa1 br3 o-80">Bands</button>
+                <button class="albums-search white bg-hot-pink link dim underline pa1 br3 o-80">Albums</button>
+                <hr class="b--hot-pink">
+            </div>
+
         </div>
 
         <!-- <hr class="b--hot-pink"> -->

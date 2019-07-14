@@ -12,6 +12,14 @@
 	position: absolute;
 }
 
+#playbutton {
+    display: inline;
+}
+
+#pausebutton {
+    display: none;
+}
+
 .search-input {
     color: white;
     font-size: 1rem;
