@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
     <title>Audio Player</title>
 </head>
@@ -18,7 +19,7 @@
     <main>
         <!-- <input id="searchbar" name="search-field" class="fl h-100 w-100 tr f3 br3 bg-light-blue" type="search">
         <button id="searchbutton">Search</button> -->
-        <h1 class="tc f-subheadline hot-pink o-80">Discover some groovy tunes</h1>
+        <h1 class="neon-title f-subeheadline-ns">Ready to listen Space Cowboy?</h1>
         <form id="search-form" role="search" class="mw5 mw8-ns center tc">
             <label class="all-access" for="search-field">Enter an artist or band name to search for song
                 samples.</label>
@@ -29,6 +30,8 @@
         <div class="tc pa1 w-100 o-80">
             <button id="playbutton" class=" white bg-hot-pink link dim pa1 br3 o-80">play</button>
             <button id="pausebutton" class="white bg-hot-pink link dim pa1 br3 o-80">pause</button>
+        </div>
+        <div id="now-playing" class="tc white">
         </div>
         <div>
             <audio controls id="music-player"
@@ -53,7 +56,7 @@
         <!-- <hr class="b--hot-pink"> -->
 
         <div class="center w-90">
-            <section class="athelas cf" id="results-display"></section>
+            <section class="cf" id="results-display"></section>
         </div>
         <div class="w-90 center tc">
             <button class="more-results tc pa3 bg-pink white br4 b--hot-pink o-80">See more results</button>

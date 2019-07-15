@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 *  {
     box-sizing: border-box;
     margin: 0;
@@ -48,6 +49,7 @@ body {
     background-size: 100%;
     background-repeat: repeat-y;
     background-color: hotpink;
+    font-family: 'Nixie One', cursive;
 }
 
 ::placeholder {
@@ -67,4 +69,70 @@ body {
 
 .results-info {
     text-shadow: 1px 1px 2px white;
+}
+
+
+
+
+
+h1 {
+  font-size: calc(20px + 15vh);
+  line-height: calc(20px + 18vh);
+  text-shadow: 0 0 5px #ff80cc, 0 0 15px #ff80cc, 0 0 20px #ff80cc, 0 0 40px #ff80cc, 0 0 60px #d5008f, 0 0 10px #ff41b4, 0 0 98px #d5008f;
+    color: #ffa3d7;
+  /* font-family: "Sacramento", cursive;
+   */
+   font-family: 'Nixie One', cursive;
+
+  text-align: center;
+  animation: blink 8s infinite;
+  -webkit-animation: blink 8s infinite;
+}
+
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+
+  text-shadow: 0 0 5px #ff80cc, 0 0 15px #ff80cc, 0 0 20px #ff80cc, 0 0 40px #ff80cc, 0 0 60px #d5008f, 0 0 10px #ff41b4, 0 0 98px #d5008f;
+    color: #ffa3d7;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+  text-shadow: 0 0 5px #ff80cc, 0 0 15px #ff80cc, 0 0 20px #ff80cc, 0 0 40px #ff80cc, 0 0 60px #d5008f, 0 0 10px #ff41b4, 0 0 98px #d5008f;
+    color: #ffa3d7;
+  }
+}
+
+#now-playing {
+    display: none;
 }

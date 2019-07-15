@@ -9,6 +9,8 @@ const albumFilter = document.querySelector(".albums-search")
 const bandFilter = document.querySelector(".bands-search")
 const playButton = document.querySelector('#playbutton')
 const pauseButton = document.querySelector('#pausebutton')
+const neonTitle = document.querySelector('.neon-title')
+const nowPlaying = document.querySelector('#now-playing')
 let searchType = 'songs'
 
 searchForm.addEventListener('submit', function (event) {
@@ -25,6 +27,7 @@ searchForm.addEventListener('submit', function (event) {
     displayMore.style.display = 'inline'
     subHeader.style.display = 'block'
     document.querySelector(".results-type").style.display = 'inline'
+    neonTitle.classList.add("f-subheadline")
 })
 
 displayMore.addEventListener('click', function () {
@@ -109,7 +112,7 @@ function makeBox(trackInfo) {
         <img class="mt2 br3 ba bw1 b--hot-pink" src="${trackInfo.artworkUrl100}">
         <h3 class="results-info hot-pink">${trackInfo.trackName}</h3>
         <h4 class="results-info hot-pink">${trackInfo.artistName}</h4>
-        <button class="play-preview mb2 bg-pink o-80 white bw0 pa1 br3 link dim mb2 dib white" data-preview="${trackInfo.previewUrl}">Play preview</button>
+        <button class="play-preview mb2 bg-pink o-80 white bw0 pa1 br3 link dim mb2 dib white" data-artist-name=${trackInfo.artistName} data-track-name=${trackInfo.trackName} data-preview="${trackInfo.previewUrl}">Play preview</button>
         `
     }
     if (searchType === 'albums') {
@@ -148,6 +151,12 @@ document.querySelector('#results-display').addEventListener('click', function (e
     if (event.target && event.target.matches('button.play-preview')) {
         audioPlayer.src = event.target.dataset['preview']
         audioPlayer.autoplay = 'true'
+
+        playButton.style.display = 'none'
+        pauseButton.style.display = 'inline'
+
+        nowPlaying.style.display = 'inline'
+        nowPlaying.innerHTML = `<p>Now Playing: ${event.target.dataset['trackName']} by ${event.target.dataset['artistName']}<p>`
     }
 })
 
@@ -162,3 +171,4 @@ pauseButton.addEventListener('click', function () {
     playButton.style.display = 'inline'
     pauseButton.style.display = 'none'
 })
+
