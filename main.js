@@ -35,7 +35,7 @@ displayMore.addEventListener('click', function () {
         )
         .then(function (data) {
             console.log(data)
-            populateResults(data.results, 10)
+            populateResults(data.results, 'sourKiss')
 
         })
 })
@@ -102,26 +102,29 @@ function makeBox(trackInfo) {
         if (trackInfo.trackName.length >= 30) {
             trackInfo.trackName = trackInfo.trackName.substring(0, 30) + "..."
         }
+        if (trackInfo.artistName.length >= 30) {
+            trackInfo.artistName = trackInfo.artistName.substring(0, 30) + "..."
+        }
         trackDiv.innerHTML = `
-        <img class="mt2" src="${trackInfo.artworkUrl100}">
-        <h3 class="hot-pink">${trackInfo.trackName}</h3>
-        <h4 class="hot-pink">${trackInfo.artistName}</h4>
-        <button class="play-preview mb2 bg-pink o-80 red bw0 pa1 br3 link dim mb2 dib white" data-preview="${trackInfo.previewUrl}">Play preview</button>
+        <img class="mt2 br3 ba bw1 b--hot-pink" src="${trackInfo.artworkUrl100}">
+        <h3 class="results-info hot-pink">${trackInfo.trackName}</h3>
+        <h4 class="results-info hot-pink">${trackInfo.artistName}</h4>
+        <button class="play-preview mb2 bg-pink o-80 white bw0 pa1 br3 link dim mb2 dib white" data-preview="${trackInfo.previewUrl}">Play preview</button>
         `
     }
     if (searchType === 'albums') {
         trackInfo.releaseDate = trackInfo.releaseDate.substring(0, 7)
         trackDiv.innerHTML = `
-        <img class="mt2" src="${trackInfo.artworkUrl100}">
-        <h3 class="hot-pink">${trackInfo.collectionName}</h3>
-        <h4 class="hot-pink">${trackInfo.artistName}</h4>
-        <h4 class="hot-pink">${trackInfo.releaseDate}</h4>
+        <img class="mt2 br3 ba bw1 b--hot-pink" src="${trackInfo.artworkUrl100}">
+        <h3 class="results-info hot-pink">${trackInfo.collectionName}</h3>
+        <h4 class="results-info hot-pink">${trackInfo.artistName}</h4>
+        <h4 class="results-info hot-pink">${trackInfo.releaseDate}</h4>
         `
     }
     if (searchType === 'bands') {
         trackDiv.innerHTML = `
-        <h2 class="hot-pink">${trackInfo.artistName}</h2>
-        <h3 class="hot-pink">${trackInfo.primaryGenreName}</h3>
+        <h2 class="results-info hot-pink">${trackInfo.artistName}</h2>
+        <h3 class="results-info hot-pink">${trackInfo.primaryGenreName}</h3>
         `
     }
     return trackDiv

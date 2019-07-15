@@ -60,3 +60,11 @@ body {
 .results-type {
     display: none;
 }
+
+.play-preview {
+    text-shadow: 1px 1px 2px white;
+}
+
+.results-info {
+    text-shadow: 1px 1px 2px white;
+}
